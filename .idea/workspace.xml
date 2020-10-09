@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="444cdca3-5e96-4b22-ae63-e81545be97f5" name="Default Changelist" comment="" />
+    <list default="true" id="444cdca3-5e96-4b22-ae63-e81545be97f5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/static/add-contact.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/mystyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/mystyle.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,11 +14,14 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1iZkahYxCr9ksVK0CUGF8nQ8C8s" />
   <component name="ProjectViewState">
@@ -39,7 +46,9 @@
       <updated>1602122567396</updated>
       <workItem from="1602122569350" duration="4063000" />
       <workItem from="1602129772690" duration="391000" />
-      <workItem from="1602163787398" duration="3131000" />
+      <workItem from="1602163787398" duration="3745000" />
+      <workItem from="1602243047103" duration="1925000" />
+      <workItem from="1602247570359" duration="649000" />
     </task>
     <servers />
   </component>
