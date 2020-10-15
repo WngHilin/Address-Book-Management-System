@@ -16,19 +16,19 @@
     <!-- jquery引入 -->
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
 </head>
-<body>
-    <div class="login-box">
-        <form action="" class="login-form" method="post">
-            <h1>登录</h1>
-            <div class="text-box">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <input type="text"     placeholder="Username" v-model="username">
+<body class="form-page">
+    <div class="form-box">
+        <h2>Login</h2>
+        <form action="">
+            <div class="input-box">
+                <input id="username" type="text" name="username" required="">
+                <label for="username">Username</label>
             </div>
-            <div class="text-box">
-                <i class="fa fa-lock" aria-hidden="true"></i>
-                <input type="password" placeholder="Password" v-model="password">
+            <div class="input-box">
+                <input id="password" type="password" name="" required="">
+                <label for="password">Password</label>
             </div>
-            <input class="login-btn" type="button" value="登录">
+            <input type="submit" name="" value="submit">
         </form>
     </div>
 </body>

@@ -1,62 +1,84 @@
-@import "//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
-body{
+.form-page{
     margin: 0;
     padding: 0;
-    font-family: "montserrat", sans-serif;
+    font-family: sans-serif;
+    background: url("../img/bg.jpg");
+    background-size: cover;
 }
 
-.login-box{
-    width: 280px;
+.form-box {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: black;
+    width: 400px;
+    padding: 40px;
+    background: rgba(0, 0, 0, .8);
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .5);
+    border-radius: 10px;
 }
 
-.login-box h1{
-    float: left;
-    font-size: 30px;
-    border-bottom: 6px solid #4caf50;
-    margin-bottom: 50px;
-    padding: 13px 0;
+.form-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
 }
 
-.text-box{
+.input-box {
+    position: relative;
+}
+
+.form-box .input-box input {
     width: 100%;
-    overflow: hidden;
-    font-size: 10px;
-    padding: 8px 0;
-    margin: 8px 0;
-    border-bottom: 1px solid #4caf50;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid;
+    outline: none;
+    background: transparent;
 }
 
-.text-box i{
-    width: 20px;
-    float: left;
+.form-box .input-box label {
+    position: absolute;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+.form-box .input-box input:focus ~ label,
+.form-box .input-box input:valid ~ label {
+    transform: translateY(-18px);
+    left: 0;
+    color: #03a9f4;
+    font-size: 12px;
 }
 
-.text-box input{
+.form-box input[type="submit"] {
+    background: transparent;
     border: none;
     outline: none;
-    background: none;
-    color: black;
-    float: left;
-}
-
-.login-btn{
-    width: 100%;
-    background: none;
-    border: 2px solid #4caf50;
-    color: black;
+    color: #fff;
+    background: #03a9f4;
+    padding: 10px 20px;
     cursor: pointer;
-    margin: 12px 0;
+    border-radius: 5px;
 }
 
-.table-btn{
-    margin: 10px 20px 10px 0px;
+.sheet {
+    top: 100px;
+    align-items: center;
 }
 
-.text-box h3{
-    float: left;
+.table-btn {
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    height: 30px;
+    width: 100px;
 }
