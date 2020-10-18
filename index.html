@@ -5,23 +5,25 @@
     <title>登陆</title>
     <!-- 自定义css文件引入 -->
     <link rel="stylesheet" href="./css/mystyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>
 <body class="form-page">
-    <div class="form-box">
+<div class="wrapper">
+    <form action="" class="form-signin" onsubmit="return jump()">
         <p style="color: red">测试用户名：12345678&nbsp&nbsp密码：12345678</p>
-        <h2>Login</h2>
-        <form action="" onsubmit="return jump()">
-            <div class="input-box">
-                <input id="username" type="text" name="username" required="">
-                <label for="username">Username</label>
-            </div>
-            <div class="input-box">
-                <input id="password" type="password" name="" required="">
-                <label for="password">Password</label>
-            </div>
-            <input type="submit" name="" value="submit">
-        </form>
-    </div>
+        <h2 class="form-signin-heading text-center">
+            Login
+        </h2>
+        <input id="username" type="text" class="form-control" name="username" placeholder="Username" required="" autofocus>
+        <input id="password" type="password" class="form-control" name="password" placeholder="Password" required="">
+        <label class="checkbox">
+            <input id="rememberMe" type="checkbox" value="remember-me" name="rememberMe">
+            Remember me
+        </label>
+        <input class="btn btn-lg btn-primary btn-block" type="submit" value="Submit">
+    </form>
+</div>
 </body>
 <script>
     function jump() {
