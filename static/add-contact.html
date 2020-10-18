@@ -3,21 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>添加联系人</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
   <!-- 自定义css文件引入 -->
   <link rel="stylesheet" href="../css/mystyle.css">
-  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-  <!-- 引入样式 -->
-  <link crossorigin="anonymous" integrity="sha384-O56yuCW/A5HUnuYx7ap1CJOXGXqaD3BxgKS9EDLgNUpNIE2BY7KsLJ+H5yr+CXpf" href="https://lib.baomitu.com/element-ui/2.13.2/theme-chalk/index.css" rel="stylesheet">
 </head>
 <body class="form-page">
 <div id="app">
   <div class="form-box">
     <h2>添加联系人</h2>
-    <form action="">
+    <form action="" onsubmit="return validateForm()">
       <div class="input-box">
         <input id="name" type="text" name="name" required="">
         <label for="name">姓名</label>
@@ -38,9 +31,36 @@
         <input id="QQNumber" type="text" name="QQNumber" required="">
         <label for="QQNumber">QQ号</label>
       </div>
-      <input type="submit" name="" value="submit">
+      <input id="submitBtn" type="submit" name="" value="submit">
     </form>
   </div>
 </div>
+<script>
+  function validateForm() {
+      var result = true;
+      var Email = document.getElementById("email");
+      var phoneNumber = document.getElementById("phoneNumber");
+      var QQNumber = document.getElementById("QQNumber");
+      var reg1 = /^\w+((.\w+)|(-\w+))@[A-Za-z0-9]+((.|-)[A-Za-z0-9]+).[A-Za-z0-9]+$/;
+      var reg2 = /^[0-9]*]*$/;
+      if(!reg1.test(Email.value)) {
+          alert("请输入正确的邮箱格式！");
+          Email.value = "";
+          result = false;
+      }
+      if(!reg2.test(phoneNumber.value)) {
+          console.log(phoneNumber.value)
+          alert("电话号码只能为数字！");
+          phoneNumber.value = "";
+          result = false;
+      }
+      if(!reg2.test(QQNumber.value)) {
+          alert("QQ号只能为数字！");
+          QQNumber.value = "";
+          result = false;
+      }
+      return result;
+  }
+</script>
 </body>
 </html>
