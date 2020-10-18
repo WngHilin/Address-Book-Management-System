@@ -24,7 +24,9 @@
 </body>
 <script>
     function jump() {
-        window.location.href = "./static/adress-book.html";
+        if(document.getElementById("username").value.length > 0 && document.getElementById("password").value.length > 0) {
+            window.location.href = "./static/adress-book.html";
+        }
     }
 </script>
 </html>
